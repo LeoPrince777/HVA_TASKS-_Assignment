@@ -1,0 +1,173 @@
+####Task - 5######
+#Assignment -1
+
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+Result ={keys[i]:values[i] for i in range (len(keys))}
+print(Result)
+
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+result = dict(zip(keys,values))
+print(result)
+
+#Assignment -2
+
+dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+dict3 = dict1.copy()
+dict3.update(dict2)
+print(dict3)
+
+dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+dict3 = {**dict1, **dict2}
+print(dict3)
+
+#Assignment -3
+
+sampleDict = {
+    "class": {
+        "student": {
+            "name": "Mike",
+            "marks": {
+                "physics": 70,
+                "history": 80
+            }
+        }
+    }
+}
+print(sampleDict['class'])
+print(sampleDict['class']['student']['marks'])
+print(sampleDict['class']['student']['name'])
+#print(sampleDict['class']['student']['name']['marks']['history'] )  TypeError: string indices must be integers
+print(sampleDict['class']['student']['marks']['history'])
+print(sampleDict['class']['student']['marks']['physics'])
+
+
+#Assignment -4
+
+employees = ['Kelly', 'Emma']
+defaults = {"designation": 'Developer', "salary": 8000}
+#res =dict()
+#res.fromkeys(employees,defaults)
+res = dict.fromkeys(employees,defaults)
+print (res)
+
+
+
+#Assignment -5
+
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+
+keys = ["name", "salary"]
+
+Ret= {k:sample_dict[k]for k in keys}
+print(Ret)
+
+res = dict()
+for k in keys:
+    res.update({k: sample_dict[k]})
+    print(res)
+print(res)    
+    
+
+#Assignment -6
+
+for k in keys:
+    sample_dict.pop(k)
+print(sample_dict)
+
+
+
+#Assignment -7
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+
+for j in sample_dict.values():
+    if j == 200:
+        print(f"yes! {j} is present in Dictionary")
+        
+for k,v in sample_dict.items():
+    if v == 200:
+        print(f"yes! {v} is present in Dictionary")
+        
+for k in sample_dict.keys():        
+    if(sample_dict.get(k)==200):
+        print(f"Wow!!{sample_dict.get(k)} is present in our Dictionary")
+        
+if 200 in sample_dict.values():
+    print("200 is present in Dict")
+
+
+#Assignment -8
+
+sample_dict = {
+"name": "Kelly",
+"age":25,
+"salary": 8000,
+"city": "New york"
+}
+
+sample_dict["location"] = sample_dict.pop('city')
+print(sample_dict)
+
+
+
+#Assignment -9
+
+sample_dict = {
+'Physics': 82,
+'Math': 65,
+'history': 75}
+
+mini = min(sample_dict)
+print(mini)
+print(min(sample_dict.keys()))
+print(min(sample_dict.values()))
+print(min(sample_dict.items()))
+
+
+
+#Assignment -10
+
+sample_dict = {
+    'emp1': {'name': 'Jhon', 'salary': 7500},
+    'emp2': {'name': 'Emma', 'salary': 8000},
+    'emp3': {'name': 'Brad', 'salary': 500}
+}
+print(sample_dict['emp3']['salary'])
+sample_dict['emp3']['salary'] = 8500
+print(sample_dict['emp3'])
+print(sample_dict['emp3']['salary'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
